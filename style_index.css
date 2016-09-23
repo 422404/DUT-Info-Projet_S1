@@ -1,9 +1,32 @@
+/*
+ global
+*/
 body {
   background-color: #c30070;
   font-size: 1.2em;
   color: white;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+hr {
+  margin: 5px;
+}
+/*
+ fin global
+*/
+
+/*
+ encadré
+*/
 #super_div {
   margin: auto;
   margin-top: 50px;
@@ -16,4 +39,52 @@ body {
 
 #super_div_child {
   margin: 0px;
+  margin-top: 3px;
 }
+/*
+ fin encadré
+*/
+
+/*
+ menu
+*/
+nav {
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  border-right: 3px solid white;
+  font-weight: bold;
+}
+
+nav:hover {
+  width: 300px;
+  height: 100%;
+}
+
+.menu_list {
+    list-style-type: none;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	width: 100%
+}
+
+.menu_item {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.menu_link {
+  padding-left: 20px;
+}
+
+.menu_item:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+/*
+ fin menu
+*/
