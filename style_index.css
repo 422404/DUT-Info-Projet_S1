@@ -1,10 +1,18 @@
 /*
  global
 */
+html
+{
+    width: 100%;
+    height: 100%;
+}
+
 body {
-  background-color: #c30070;
-  font-size: 1.2em;
+  background: linear-gradient(to bottom right, rgba(20,20,20,1), rgba(0,0,0,1));
+  font-size: 1.3em;
   color: white;
+  overflow-y: scroll;
+  background-attachment: fixed;
 }
 
 a {
@@ -21,9 +29,13 @@ hr {
   margin: 5px;
 }
 
-img {
-  max-width: 100%;
-  max-height: 100%;
+article {
+  margin: auto;
+  width: 50%;
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  border: 2px solid white;
+  min-width: 400px;
 }
 /*
  fin global
@@ -31,22 +43,6 @@ img {
 
 /*
  encadré
-*/
-/*
-#super_div {
-  margin: auto;
-  margin-top: 50px;
-  border: 3px solid white;
-  width: 100px;
-  height: 30px;
-  text-align: center;
-  padding: 3px;
-}
-
-#super_div_child {
-  margin: 0px;
-  margin-top: 3px;
-}
 */
 #super_div_container {
   margin: auto;
@@ -86,7 +82,7 @@ nav {
   width: 0px;
   z-index: 1001;
   height: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.7); 
   border-right: 3px solid white;
   font-weight: bold;
 }
@@ -121,14 +117,9 @@ nav:hover {
   display: inline-block;
 }
 
-.menu_item:hover {
-  background-color: rgba(0,0,0,0.5);
-}
-
-#menu_img {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
+.menu_link:hover {
+  background-color: rgba(255,255,255,1); 
+  color: black;
 }
 /*
  fin menu
@@ -138,21 +129,35 @@ nav:hover {
  pied de page
 */
 footer {
-  background: linear-gradient(to bottom, rgba(190,0,75,0), rgba(190,0,75,1)); /*#be004b*/
   position: fixed;
   bottom: 0px;
   left: 0px;
   width: 100%;
-  height: 100px;
+  height: 30px;
 }
 
 #footer_text {
   position: absolute;
   bottom: 0px;
   right: 0px;
+  z-index: -999;
   margin: 10px;
-  color: #c3c3c3;
+  color: #b0b0b0;
 }
 /*
  fin pied de page
+*/
+
+/*
+ crane ascii
+*/
+#skull {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: -999;
+  filter: blur(1px);
+}
+/*
+ fin crane ascii
 */
