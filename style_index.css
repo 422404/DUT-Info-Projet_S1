@@ -39,7 +39,7 @@
 .super_link_text {
   margin: 0px;
   transform: rotate(-45deg);
-  display: block;
+  display: inline-block;
 }
 
 .super_link_box:hover {
