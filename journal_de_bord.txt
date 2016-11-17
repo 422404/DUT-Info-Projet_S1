@@ -1,9 +1,0 @@
-Journal de bord: Elyan Poujol
---------------------------------------------------------
-[3/11/2016]
-- Création des branches sur github
-- Répartition des tâches
-
-[10/11/2016]
-- Passage sous LESS
-- Hebergement du site sur toile-libre.org (cybercriminalite.toile-libre.org)
