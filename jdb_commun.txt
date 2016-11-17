@@ -1,0 +1,27 @@
+Journal de bord collectif :
+---------------------------
+
+[2/11/2016]
+- Recherches documentaires pour le site
+
+[3/11/2016]
+- Création des branches sur github
+- Répartition des tâches
+- Répartition des taches
+- Mise en place du journal de bord
+- Création des comptes sur GitHub pour le partage des données
+- Mise en place du plan par page pour le site (contenu)
+
+[10/11/2016]
+- Passage sous LESS
+- Hebergement du site sur toile-libre.org (http://cybercriminalite.toile-libre.org)
+
+[17/10/2016]
+- Architecture du site faite
+- Passage sous du CSS compilé par LESS (le CSS n'est plus compilé a l'affichage)
+- Maquette du site faite
+- Mise en place de l'échéancier
+- Recherches documentaires
+- Traitement des données en fonction de l’architecture du site internet
+
+
