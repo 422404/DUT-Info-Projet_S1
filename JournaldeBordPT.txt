@@ -5,3 +5,5 @@ création des comptes sur GitHub pour le partage des données
 Mise en place du plan par page pour le site (contenu)
 
 17/11/2016 : Mise en place de l'échéancier
+
+18/11/2016 : modification du code du site et, on commence a mettre le vrai texte dans les pages
