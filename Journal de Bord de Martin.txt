@@ -6,7 +6,9 @@
 17/11/2016: Mise à jour du Journal de Bord 
            + Maquette du site
 
+02/12/2016: Début de création d'une page vers laquelle on est redirigé après avoir cliqué sur une section
+            du site
 
-
+04/12/2016: Amélioration de la page.
 
             
