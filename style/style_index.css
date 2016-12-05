@@ -1,0 +1,73 @@
+/* titre page */
+#section_title {
+  margin-left: 50px;
+}
+#section_title::before {
+  content: "/";
+}
+/* rend le texte non selectionnable */
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* menu */
+.inline_menu {
+  margin: auto;
+  margin-top: 100px;
+  padding: 0px;
+  max-width: 1200px;
+  min-width: 400px;
+  min-height: 600px;
+}
+.inline_menu .item {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+}
+.inline_menu .link_container {
+  margin: 25px;
+  width: 250px;
+  height: 250px;
+  padding: 0px;
+}
+.inline_menu .link_box {
+  transform: rotate(45deg);
+  position: relative;
+  top: 36px;
+  left: 36px;
+  border: 3px solid white;
+  width: 167px;
+  height: 167px;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  padding: 0px;
+}
+.inline_menu .link_text {
+  margin: 0px;
+  transform: rotate(-45deg);
+  display: inline-block;
+}
+.inline_menu .link_box:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #00ffff;
+}
+/* crane ascii (l'ascii art fut beaucoup utilisé par les anciens hackers) */
+#skull {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: -999;
+  filter: blur(1px);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

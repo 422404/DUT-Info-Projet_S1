@@ -1,4 +1,4 @@
-Journal de bord Morgane :
+﻿Journal de bord Morgane :
 
 3/10/2016 : Répartition des taches, mise en place du journal de bord
 création des comptes sur GitHub pour le partage des données
