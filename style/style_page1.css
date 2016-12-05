@@ -63,5 +63,6 @@
 /* encadré texte */
 .titre_article {
   color: #00ffff;
-  text-decoration: underscore;
+  margin-top: 0px;
+  text-decoration: underline;
 }
