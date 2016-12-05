@@ -23,7 +23,7 @@
   z-index: 1001;
   height: 100%;
   border: none;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.7);
   font-weight: bold;
   transition-duration: 0.2s;
 }
@@ -60,9 +60,12 @@
   background-color: #ffffff;
   color: black;
 }
-/* encadré texte */
-.titre_article {
-  color: #00ffff;
-  margin-top: 0px;
-  text-decoration: underline;
+/* page */
+#page {
+  width: 100%;
+  min-width: 600px;
+  height: 100%;
+  margin: 0px;
+  padding-top: 80px;
+  transition-duration: 0.2s;
 }
