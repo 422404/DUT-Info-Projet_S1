@@ -1,8 +1,8 @@
 Journal de bord: Elyan Poujol
 --------------------------------------------------------
 [03/11/2016]
-- CrÈation des branches sur github
-- RÈpartition des t‚ches
+- Cr√©ation des branches sur github
+- R√©partition des t√¢ches
 
 [10/11/2016]
 - Passage sous LESS
@@ -10,11 +10,12 @@ Journal de bord: Elyan Poujol
 
 [17/10/2016]
 - Architecture du site faite
-- Passage sous du CSS compilÈ par LESS (le CSS n'est plus compilÈ a l'affichage)
+- Passage sous du CSS compil√© par LESS (le CSS n'est plus compil√© a l'affichage)
 
 [02/12/2016]
 - construction d'un menu en javascript
-- remise en question de l'utilitÈ de LESS, ‡ voir...
+- remise en question de l'utilit√© de LESS, √† voir...
 
 [05/12/2016]
 - rangement des branches
+- am√©lioration du menu suivit de modifications des pages
