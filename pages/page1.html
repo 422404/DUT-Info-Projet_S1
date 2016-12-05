@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>La cybercriminalité</title>
+  <title>La Cybercriminalité</title>
   <meta charset="utf-8" />
-  <!-- <link rel="stylesheet/less" type="text/css" href="style_global.less" />
-  <link rel="stylesheet/less" type="text/css" href="style_page1.less" />
-  <script src="less.js" type="text/javascript"></script> -->
-  
   <link rel="stylesheet" type="text/css" href="../style/style_global.css" />
   <link rel="stylesheet" type="text/css" href="../style/style_page1.css" />
+  <script src="../script/script_menu.js" type="text/javascript"></script>
 </head>
   
 <body>
-
+<!-- bouton menu -->
+  <div id="menu_button" onClick="toggleMenu()">
+  </div>
+  
 
 <!-- Menu -->
-  <nav class="menu">	
+  <nav id="menu" class="closed_menu">	
     <h3 id="title"><u>/MENU:</u></h3>
 	<hr />
     <ul class="list">
@@ -34,20 +34,20 @@
 	  
     <hr />	
   </nav>
-<!-- /Menu -->
+
   
 <!-- Titre -->
   <a href="../index.html"><h2 id="return">../</h2></a>
   <br />
   <h2 id="section_title">Présentation</h2>
   <br />
-<!-- /Titre -->
+
 
   <article>  
 <!-- Sous titre -->
     <h3 class="titre_article">Résumé</h3>
     <br />
-<!-- /Sous titre -->
+
   
   
 <!-- Texte -->
@@ -56,7 +56,6 @@
 	<br />
 	Ce projet est réalisé par 4 étudiants : POUJOL Elyan, ROMESTANT Pierre,
 	MASSOL Martin et TUFFERY Morgane. Etudiants en 1ère année à l'IUT Informatique de Rodez.</p>
-<!-- /Texte -->
   </article>
 
 
@@ -93,7 +92,6 @@ XXXXX                        XXXXX
     <h5 id="footer_hint"><= Menu! (<u>/!\</u> cliques si t'es sur mobile)</h5>
     <h5 id="footer_text">Elyan Poujol 2016</h5>
   </footer>
-<!-- /Pied de page -->
 
 
 </body>
