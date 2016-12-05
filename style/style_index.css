@@ -47,6 +47,7 @@
   vertical-align: middle;
   display: table-cell;
   padding: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .inline_menu .link_text {
   margin: 0px;
@@ -54,7 +55,7 @@
   display: inline-block;
 }
 .inline_menu .link_box:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(35, 35, 35, 0.5);
   color: #00ffff;
 }
 /* crane ascii (l'ascii art fut beaucoup utilisé par les anciens hackers) */

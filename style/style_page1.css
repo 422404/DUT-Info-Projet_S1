@@ -14,7 +14,7 @@
 }
 
 /* menu */
-.closed_menu {
+#menu {
   overflow: hidden;
   position: fixed;
   top: 0px;
@@ -24,20 +24,6 @@
   height: 100%;
   border: none;
   background-color: rgba(0, 0, 0, 1);
-  font-weight: bold;
-  transition-duration: 0.2s;
-}
-.opened_menu {
-  width: 300px;
-  height: 100%;
-  border: none;
-  overflow: hidden;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 1001;
-  background-color: rgba(0, 0, 0, 1);
-  border-right: 3px solid white;
   font-weight: bold;
   transition-duration: 0.2s;
 }
@@ -75,10 +61,6 @@
   color: black;
 }
 /* encadré texte */
-article {
-  min-height: 400px;
-  max-width: 800px;
-}
 .titre_article {
   color: #00ffff;
   text-decoration: underscore;
