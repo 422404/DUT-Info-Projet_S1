@@ -1,0 +1,73 @@
+/* titre page */
+#section_title:before {
+  content: "/La Cybercriminalité/";
+}
+/* bouton menu */
+#menu_button {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  z-index: 1002;
+  font-size: 50px;
+  text-align: right;
+}
+
+/* menu */
+#menu {
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  z-index: 1001;
+  height: 100%;
+  border: none;
+  /*background-color: rgba(0, 0, 0, 0.7);*/
+  background-color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  transition-duration: 0.2s;
+}
+#menu .list {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+#menu #title {
+  margin: 0px;
+  padding-top: 15px;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+#menu hr {
+  margin: 0px;
+  line-height: 3;
+  color: white;
+}
+#menu .item {
+  width: 100%;
+  margin: 0px;
+}
+#menu .link {
+  padding-left: 20px;
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+}
+#menu .link:hover {
+  background-color: #ffffff;
+  color: black;
+}
+/* page */
+#page {
+  width: 100%;
+  min-width: 600px;
+  height: 100%;
+  margin: 0px;
+  padding-top: 80px;
+  transition-duration: 0.2s;
+}
