@@ -21,7 +21,7 @@ function closeMenu() {
   menu.style.width = "0px";
   //menu.style.borderRight = "none";
   bouton_menu_icon.className = "fa fa-bars";
-  page.style.marginLeft = menu.style.width;
+  page.style.marginLeft = "0px";
 }
 
 function openMenu() {
@@ -33,5 +33,5 @@ function openMenu() {
   menu.style.width = "300px";
   //menu.style.borderRight = "2px solid #00FFFF";
   bouton_menu_icon.className = "fa fa-close";
-  page.style.marginLeft = menu.style.width;
+  page.style.marginLeft = "300px";
 }

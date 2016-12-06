@@ -2,6 +2,11 @@
 #section_title:before {
   content: "/La Cybercriminalité/";
 }
+@media screen and (max-width: 600px) { /* ne rentre pas sur mobile */
+  #section_title:before {
+    content: "/";
+  }
+}
 /* bouton menu */
 #menu_button {
   position: fixed;
@@ -21,6 +26,7 @@
   top: 0px;
   left: 0px;
   width: 0px;
+  max-width: 300px;
   z-index: 1001;
   height: 100%;
   border: none;
@@ -65,7 +71,7 @@
 /* page */
 #page {
   width: 100%;
-  min-width: 600px;
+  /*min-width: 600px;*/
   height: 100%;
   margin: 0px;
   padding-top: 80px;

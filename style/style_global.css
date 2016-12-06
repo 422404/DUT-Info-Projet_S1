@@ -24,7 +24,7 @@ header {
   top: 0px;
   padding-left: 100px;
   width: 100%;
-  min-width: 600px;
+  /*min-width: 600px;*/
   /*background-color: black;*/
   background-color: darkcyan;
   padding-bottom: 30px;
@@ -40,7 +40,23 @@ article {
   padding: 10px;
   border: 2px solid white;
   border-radius: 0px 10px 0px 10px;
-  min-width: 400px;
+}
+@media screen and (max-width: 1300px) {
+  article {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  article {
+    width: 100%;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    background-color: rgba(0, 150, 150, 0.5);
+    padding: 10px;
+	border: none;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+	border-radius: 0px;
+  }
 }
 .titre_article {
   color: #00ffff;
@@ -79,6 +95,11 @@ footer {
 /*
  crane ascii
 */
+@media screen and (max-width: 300px), (max-height: 600px) {
+  #skull {
+    display: none;
+  }
+}
 #skull {
   position: fixed;
   bottom: 40px;
