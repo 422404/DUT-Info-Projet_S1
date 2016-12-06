@@ -18,3 +18,8 @@ Journal de bord: Elyan Poujol
 
 [05/12/2016]
 - rangement des branches
+- amélioration du menu suivit de modifications des pages
+
+[06/12/2016]
+- gros ajustements du site
+- menu grandement amélioré
