@@ -21,5 +21,13 @@ Journal de bord: Elyan Poujol
 - amélioration du menu suivit de modifications des pages
 
 [06/12/2016]
-- gros ajustements du site
+- gros ajustements du site (architecture de la page changée pour nouveau menu)
 - menu grandement amélioré
+
+[9/12/2016]
+- mise en place d'un menu d'ancres pour les pages avec plusieurs articles
+
+[10/12/2016]
+- nouveau menu d'ancres maintenant responsive comme la plupart du site
+- abandon de LESS, mauvaise idée dès le départ, pas de réelles nécéssités juste des inconvénients
+- améliorations mineures du style

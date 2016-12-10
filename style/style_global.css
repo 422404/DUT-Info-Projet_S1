@@ -1,5 +1,5 @@
 body {
-  background-color: teal;
+  background-color: #660000;
   font-size: 1.0em;
   color: white;
   background-attachment: fixed;
@@ -8,16 +8,36 @@ body {
   font-family: Verdana;
 }
 
-/* en-tête */
+/********** scrollbar sous webkit uniquement **********/
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+  background-color: #660000;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  background-color: #660000;
+}
+
+*::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: #880000;
+  border-radius: 5px;
+}
+
+/********** en-tête **********/
 header {
   position: fixed;
   top: 0px;
+  padding: 0px;
+  margin: 0px;
   padding-left: 100px;
   width: 100%;
-  background-color: darkcyan;
+  background-color: #990000;
   padding-bottom: 30px;
   z-index: 1000;
-  border-bottom: 3px solid teal;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
 }
 
 header a {
@@ -34,54 +54,61 @@ header a:visited {
   display: inline;
 }
 
+#return {
+  color: #ffffff;
+  display: inline;
+}
+
+#menu_button {
+  position: fixed;
+  top: 0px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  z-index: 1002;
+  font-size: 50px;
+  text-align: right;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 600px) {
   #section_title::before {
     content: "/";
   }
 }
 
-#return {
-  color: #00ffff;
-  display: inline;
-}
-
-/* rubriques */
+/********** rubriques **********/
 article {
   margin: auto;
   margin-top: 100px;
   width: 50%;
-  background-color: rgba(0, 150, 150, 0.5);
+  background-color: rgba(191, 0, 0, 0.5);
   padding: 10px;
   border-radius: 0px 10px 0px 10px;
-}
-
-@media screen and (max-width: 1300px) {
-  article {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  article {
-    width: 100%;
-	margin-top: 30px;
-	border: none;
-	border-radius: 0px;
-  }
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
 }
 
 .titre_article {
   position: relative;
   left: -30px;
   top: -4px;
-  background-color: darkcyan;
+  background-color: #990000;
   padding: 5px;
   display: inline-block;
-  border: 3px solid teal;
+  border: 3px solid #660000;
   border-radius: 5px;
-  color: #00ffff;
+  color: white;
   margin: 0px;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1300px) {
+  article {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -94,9 +121,16 @@ article {
     display: inline;
     border: none;
   }
+  
+  article {
+    width: 100%;
+	margin-top: 30px;
+	border: none;
+	border-radius: 0px;
+  }
 }
 
-/* contenu de la page */
+/********** contenu de la page **********/
 #page {
   width: 100%;
   height: 100%;
@@ -105,7 +139,7 @@ article {
   transition-duration: 0.2s;
 }
 
-/* pied de page */
+/********** pied de page **********/
 footer {
   margin-top: 40px;
   width: 100%;
@@ -119,13 +153,7 @@ footer {
   font-size: 0.7em;
 }
 
-/* crane ascii */
-@media screen and (max-width: 300px), (max-height: 550px) {
-  #skull {
-    display: none;
-  }
-}
-
+/********** crane ascii **********/
 #skull {
   position: fixed;
   bottom: 40px;
@@ -134,7 +162,13 @@ footer {
   filter: blur(1px);
 }
 
-/* divers */
+@media screen and (max-width: 300px), (max-height: 550px) {
+  #skull {
+    display: none;
+  }
+}
+
+/********** divers **********/
 
 /* rend le texte non selectionnable */
 .unselectable {
