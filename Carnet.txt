@@ -1,0 +1,16 @@
+ROMESTANT Pierre
+1.	Recherche documentaire sur :
+ 
+-	Définition de la cybercriminalité
+-	Les différents types de cybercriminels
+-	Les enjeux des cybercriminels
+-	Quelques chiffres et des liens vers des organismes luttant contre la cybercriminalité
+-	Les technologies de l’information et de la communication
+-	Différentes évolutions de la communication. au travers de l'informatique
+-	Comment internet favorise la cybercriminalité
+
+2.Traitement des données en fonction de l’architecture du site internet
+
+3.Choix des titres des pages + gestion de leurs contenus
+
+4. Adaptation du texte pour en paragraphe distinct pour le site   
