@@ -14,8 +14,8 @@
 </head>
 
 <body onResize="anchorsMenuFixup()"> <!-- fonction a n'inclure que sur les pages avec un "menu à ancres" -->
-<!-- Bouton menu -->
-  <div id="menu_button" onClick="toggleMenu()">
+<!-- Bouton du menu -->
+  <div id="menu_button" onclick="toggleMenu()">
     <i id="menu_button_icon" class="fa fa-bars" aria-hidden="true"></i>
   </div>
 
@@ -38,7 +38,8 @@
     </ul>
   </nav>
 
-  <div id="page" onClick="closeMenu()">
+<!-- Contenu principal -->
+  <div id="page" onclick="closeMenu()">
   
 <!-- Titre -->
     <header>
@@ -48,15 +49,16 @@
       <br />
 	</header>
 
+<!-- Menu à ancres -->
     <div id="menu_anchors" data-state="closed_menu">
-	  <span id="menu_anchors_title" onClick="toggleAnchorsMenu()">
+	  <span id="menu_anchors_title" onclick="toggleAnchorsMenu()">
 	    Sauts dans la page
 	    <i id="menu_anchors_title_arrow" class="fa fa-caret-down" aria-hidden="true"></i>
 	  </span>
 	  <div class="l1">
-		  <span class="jump" onClick="jumpToAnchor('resume')">Résumé</span>
-		  <span class="jump" onClick="jumpToAnchor('test')">Test</span>
-		  <span class="jump">test js</span>
+		  <span class="jump" onclick="jumpToAnchor('resume')">Résumé</span>
+		  <span class="jump" onclick="jumpToAnchor('test')">Test</span>
+		  <span class="jump" onclick="debug_getTopOffset('test')">test js</span>
 	  </div>
 	  
 	  <div class="l2">
@@ -72,8 +74,8 @@
 	</div>
 
 
-    <article id="resume">
 <!-- Présentation site -->
+    <article id="resume">
       <h3 class="titre_article">Résumé</h3>
 
       <p>		Le but étant de comprendre en quoi les technologies de l'information 
@@ -82,9 +84,9 @@
 	  Ce projet est réalisé par 4 étudiants : POUJOL Elyan, ROMESTANT Pierre,
 	  MASSOL Martin et TUFFERY Morgane. Etudiants en 1ère année à l'IUT Informatique de Rodez.</p>
     </article>
-  
-    <article id="test">  
-<!-- paragraphe test -->
+
+<!-- paragraphe test -->	
+    <article id="test">
       <h3 class="titre_article">Test</h3>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar augue 
