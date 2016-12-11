@@ -31,3 +31,6 @@ Journal de bord: Elyan Poujol
 - nouveau menu d'ancres maintenant responsive comme la plupart du site
 - abandon de LESS, mauvaise idée dès le départ, pas de réelles nécéssités juste des inconvénients
 - améliorations mineures du style
+
+[11/12/2016]
+- amélioration mineure du menu à ancres
