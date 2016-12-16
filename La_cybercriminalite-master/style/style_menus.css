@@ -1,0 +1,195 @@
+/********** menu de l'index **********/
+#inline_menu {
+  margin-top: 100px;
+  padding: 0px;
+  text-align: center;
+}
+#inline_menu .item {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
+#inline_menu .link_container {
+  margin: 25px;
+  width: 250px;
+  height: 250px;
+  padding: 0px;
+}
+#inline_menu .link_box {
+  transform: rotate(45deg);
+  position: relative;
+  top: 36px;
+  left: 36px;
+  display: table-cell;
+  border: 3px solid white;
+  width: 167px;
+  height: 167px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#inline_menu .link_text {
+  margin: 0px;
+  transform: rotate(-45deg);
+  display: inline-block;
+  font-size: 1.2em;
+}
+#inline_menu .link_box:hover {
+  background-color: rgba(35, 35, 35, 0.4);
+  color: #fafafa;
+}
+
+#inline_menu a {
+  color: white;
+  text-decoration: none;
+}
+
+#inline_menu a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/********** menu des pages standards **********/
+#menu {
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  left: -300px;
+  width: 300px;
+  max-width: 300px;
+  z-index: 1001;
+  height: 100%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  transition-duration: 0.2s;
+  color: white;
+}
+
+#menu .list {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0px;
+  margin-top: 10px;
+  padding: 0px;
+  width: 100%;
+}
+
+#menu_home {
+  width: 100%;
+  margin: 0px;
+}
+
+#menu_home a {
+  margin: 0px;
+  margin-top: 15px;
+  margin-left: 105px;
+  padding: 5px;
+  width: 150px;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap;
+  border: 3px solid white;
+  border-radius: 3px;
+}
+
+#menu hr {
+  margin: 0px;
+  line-height: 3;
+  color: white;
+}
+
+#menu .item {
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+}
+
+#menu .link {
+  padding: 5px;
+  padding-left: 20px;
+  margin-top: 10px;
+  width: 210px;
+  display: inline-block;
+  white-space: nowrap;
+  border: 3px solid white;
+  border-radius: 3px;
+  text-align: left;
+}
+
+#menu hr {
+  margin: 20px 5px 0px 5px;
+}
+
+#menu a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#menu a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+#menu a:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+
+.menu_current {
+  background-color: #990000;
+  border: 3px solid #990000 !important;
+}
+
+/********** menu liens ancres **********/
+#menu_anchors {
+  text-align: center;
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+#menu_anchors_title {
+  width: 100%;
+  height: 27px;
+  margin: 0px;
+  padding-top: 3px;
+  border-bottom: 3px solid white;
+  background-color: #ffffff;
+  color: black;
+  display: none;
+}
+
+#menu_anchors .jump {
+  width: 180px;
+  height: 20px;
+  margin: 10px;
+  display: inline-block;
+  border: 3px solid white;
+  border-radius: 3px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: left;
+  padding-left: 20px;
+}
+
+#menu_anchors .jump:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  #menu_anchors_title {
+    display: block;
+	cursor: pointer;
+  }
+  
+  #menu_anchors {
+    margin-top: 30px;
+	max-height: 30px;
+	border: 3px solid white;
+	background-color: rgba(191, 0, 0, 0.5);
+  }
+}
