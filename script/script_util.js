@@ -1,8 +1,7 @@
 function getTopOffset(elementId) {
   var element = document.getElementById(elementId);
-  var offsets = element.getBoundingClientRect();
-  var top = offsets.top;
-  return top;
+  var offset = element.offsetTop;
+  return offset;
 }
 
 function debug_getTopOffset(elementId) {
@@ -15,5 +14,6 @@ function jumpToAnchor(anchorName) {
   if (window.matchMedia("(max-width:600px)").matches && menu_anchors.dataset.state == "opened_menu") {
     closeAnchorsMenu();
   }
-  window.scrollTo(0, getTopOffset(anchorName) - 110); /* 110 == headerSize + 20 */
+  window.page.scrollTop += getTopOffset(anchorName) - 110; // 110 == headerSize + 20
+  console.log(page.scrollTop);
 }
