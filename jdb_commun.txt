@@ -5,11 +5,11 @@ Journal de bord collectif :
 - Recherches documentaires pour le site
 
 [3/11/2016]
-- CrÈation des branches sur github
-- RÈpartition des t‚ches
-- RÈpartition des taches
+- Cr√©ation des branches sur github
+- R√©partition des t√¢ches
+- R√©partition des taches
 - Mise en place du journal de bord
-- CrÈation des comptes sur GitHub pour le partage des donnÈes
+- Cr√©ation des comptes sur GitHub pour le partage des donn√©es
 - Mise en place du plan par page pour le site (contenu)
 
 [10/11/2016]
@@ -18,10 +18,27 @@ Journal de bord collectif :
 
 [17/10/2016]
 - Architecture du site faite
-- Passage sous du CSS compilÈ par LESS (le CSS n'est plus compilÈ a l'affichage)
+- Passage sous du CSS compil√© par LESS (le CSS n'est plus compil√© a l'affichage)
 - Maquette du site faite
-- Mise en place de l'ÈchÈancier
+- Mise en place de l'√©ch√©ancier
 - Recherches documentaires
-- Traitement des donnÈes en fonction de líarchitecture du site internet
+- Traitement des donn√©es en fonction de l‚Äôarchitecture du site internet
 
+[02/12/2016]
+- Ajout de fonctionnalit√©s au site
 
+[05/12/2016]
+- am√©liorations du site
+
+[06/12/2016]
+- am√©liorations du site
+
+[9/12/2016]
+- am√©liorations du site
+
+[10/12/2016]
+- am√©lioration du site
+- abandon de LESS, mauvaise id√©e... (inutile)
+
+[11/12/2016]
+- am√©lioration (tr√®s) mineures du site
