@@ -7,8 +7,14 @@
            + Maquette du site
 
 02/12/2016: Début de création d'une page vers laquelle on est redirigé après avoir cliqué sur une section
-            du site
+            du site (Annulé ou reporté)
 
 04/12/2016: Amélioration de la page.
+
+29/12/2016: Début création du footer + création de la page Facebook
+
+2/01/2017: Footer terminé + création de la page " Qui sommes-nous ?" contenant les informations relatives
+           aux créateurs et à leur projet.
+           
 
             
