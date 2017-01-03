@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>La Cybercriminalité</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#990000">
+  <link rel="stylesheet" type="text/css" href="../style/style_page1.css" />
+  <link rel="stylesheet" type="text/css" href="../style/style_menus.css" />
+  <link rel="stylesheet" type="text/css" href="../style/style_global.css" />
+  <link rel="stylesheet" type="text/css" href="../style/font-awesome-4.7.0/css/font-awesome.min.css" />
+  <script src="../script/script_menus.js" type="text/javascript"></script>
+  <script src="../script/script_util.js" type="text/javascript"></script>
+  <style>
+  footer { 
+		background:grey;
+		display: table-row;
+		bottom:0px;
+		left: 0;
+		right: 0;
+		height:130px;
+	}
+    table {
+    width: 95%;
+	text-align:center;
+    }
+    td {
+    width: 20%;
+    }	
+    a {
+	color:black;
+    text-decoration: none;	
+	}
+</style>
+</head>
+
+<body onResize="anchorsMenuFixup()"> <!-- fonction a n'inclure que sur les pages avec un "menu à ancres" -->
+<!-- Bouton menu -->
+  <div id="menu_button" onClick="toggleMenu()">
+    <i id="menu_button_icon" class="fa fa-bars" aria-hidden="true"></i>
+  </div>
+
+<!-- Menu -->
+  <nav data-state="closed_menu" id="menu">	
+    <h3 id="menu_home"><a href="../index.html">/Acceuil:</a></h3>
+	<hr />
+    <ul class="list">
+	  <li class="item">
+	    <span class="link menu_current">Présentation</span>
+	  </li>
+	  
+	  <li class="item">
+	    <a href="#" class="link">Lien 2</a>
+	  </li>
+	  
+	  <li class="item">
+	    <a href="#" class="link">Lien 3</a>
+	  </li>
+    </ul>
+  </nav>
+
+  <div id="page" onClick="closeMenu()">
+  
+<!-- Titre -->
+    <header>
+	  <a href="../index.html"><h2 id="return">../</h2></a>
+      <br />
+      <h2 id="section_title">Présentation</h2>
+      <br />
+	</header>
+
+    <div id="menu_anchors" data-state="closed_menu">
+	  <span id="menu_anchors_title" onClick="toggleAnchorsMenu()">
+	    Sauts dans la page
+	    <i id="menu_anchors_title_arrow" class="fa fa-caret-down" aria-hidden="true"></i>
+	  </span>
+	  <div class="l1">
+		  <span class="jump" onClick="jumpToAnchor('resume')">Résumé</span>
+		  <span class="jump" onClick="jumpToAnchor('test')">Test</span>
+		  <span class="jump">test js</span>
+	  </div>
+	  
+	  <div class="l2">
+	    <span class="jump">hello world!</span>
+		<span class="jump">hello world!</span>
+	  </div>
+	  
+	  <div class="l3">
+	    <span class="jump">hello world!</span>
+		<span class="jump">hello world!</span>
+		<span class="jump">hello world!</span>
+	  </div>
+	</div>
+
+
+    <article id="resume">
+<!-- Présentation site -->
+      <h3 class="titre_article">Résumé</h3>
+
+      <p>		Le but étant de comprendre en quoi les technologies de l'information 
+  	  et de la communication permettent-elles des délits et d'autres actes illicites? 
+  	  <br />
+	  Ce projet est réalisé par 4 étudiants : POUJOL Elyan, ROMESTANT Pierre,
+	  MASSOL Martin et TUFFERY Morgane. Etudiants en 1ère année à l'IUT Informatique de Rodez.</p>
+    </article>
+  
+    <article id="test">  
+<!-- paragraphe test -->
+      <h3 class="titre_article">Test</h3>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar augue 
+	  porttitor eros fermentum, eu pretium ante sagittis. Pellentesque vehicula quam a egestas 
+	  ullamcorper. Pellentesque tristique non ligula sed accumsan. Nullam lacus est, placerat 
+	  sed malesuada nec, molestie sed lorem. Aliquam sed justo gravida, lobortis diam id, 
+	  interdum mi. Morbi sed leo id magna volutpat maximus id nec nisi. Sed tempor convallis 
+	  laoreet. Aenean non cursus tortor. Donec turpis ipsum, commodo ac neque eu, sagittis 
+	  lacinia enim. Sed leo turpis, ultricies vel interdum ac, euismod ac ipsum.
+
+      Proin vitae porta odio. Sed ullamcorper velit nec elit sodales facilisis. Duis vestibulum, 
+      justo at tempor ultrices, magna nisi pellentesque erat, id rhoncus lectus elit in libero. 
+      Donec et sagittis nisl. Etiam ultricies faucibus suscipit. Maecenas sodales interdum ex 
+      quis dapibus. Aliquam sed commodo nisi, eget vulputate lacus. Vestibulum dictum nec leo 
+      quis feugiat. Ut lobortis, neque eget facilisis maximus, mi est placerat massa, eu viverra 
+      odio erat sed urna. Sed pretium mi bibendum semper auctor. Quisque at elit eget sem pellentesque 
+      porttitor eget vel velit. Proin quis nibh semper, rutrum arcu sit amet, consectetur nibh.
+
+      Suspendisse a nibh massa. Nunc nec est leo. In id neque ac ligula hendrerit ultrices. Nullam 
+      auctor vel velit quis viverra. Nam eu mauris sit amet orci tincidunt aliquet. Vestibulum et 
+      pellentesque massa. Morbi sit amet nulla enim. Vestibulum bibendum congue leo vel finibus. 
+      Sed quam lectus, semper a porttitor at, rutrum et justo. Fusce interdum pellentesque sodales.
+
+      Sed eget erat pellentesque, consectetur velit vitae, consectetur velit. Fusce euismod ipsum 
+	  ut est vehicula pulvinar. Etiam ac consequat nibh, at facilisis erat. Aliquam sed laoreet lorem, 
+	  at semper nisi. In faucibus gravida aliquet. Nam at elit porttitor, condimentum nisi in, fringilla 
+	  quam. Pellentesque habitant morbi tristique senectus et netus et malesuada 
+	  fames ac turpis egestas. 
+	  Aliquam a velit risus. Aliquam vehicula semper lectus vulputate tincidunt. Phasellus volutpat nunc 
+	  sit amet aliquet finibus. Pellentesque sollicitudin nisl nibh, sed lobortis nisi sagittis eget. Nam 
+	  vel velit vehicula, sagittis elit vel, varius ante. Suspendisse ipsum dolor, molestie vel massa et, 
+	  eleifend auctor libero. Fusce vitae tristique turpis. Phasellus eget lectus vitae nisl volutpat ornare 
+	  eu quis metus. Integer vel mattis eros, eu commodo orci.
+
+      Proin sit amet sapien ac lorem fringilla luctus. Etiam mollis ligula quam, ac porttitor augue molestie 
+	  et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget pharetra urna, vitae placerat 
+	  lectus. Donec id dui at erat consectetur imperdiet vitae id lorem. Fusce enim ex, feugiat ut laoreet 
+	  non, elementum vitae augue. Donec suscipit est vel libero porta, id pulvinar mauris scelerisque. Quisque 
+	  sollicitudin risus et ante tincidunt placerat. Curabitur ac est massa. Vivamus ultrices metus purus, et 
+	  sollicitudin metus condimentum vitae. Etiam a commodo mi. Fusce molestie a eros ut venenatis. Morbi 
+	  accumsan metus nibh. Duis sit amet justo dictum, faucibus dolor hendrerit, mattis ex.</p>
+    </article>
+
+
+    <pre id="skull" class="unselectable"> 
+         _______________
+        /               \
+       /                 \
+      /                   \
+      |   XXXX     XXXX   |
+      |   XXXX     XXXX   |
+      |   XXX       XXX   |
+      |         X         |
+      \__      XXX     __/
+        |\     XXX     /|
+        | |           | |
+        | I I I I I I I |
+        |  I I I I I I  |
+         \_           _/
+          \_         _/
+            \_______/
+  XXX                        XXX
+XXXXX                        XXXXX
+ XXXXXXXXXX             XXXXXXXXXX
+         XXXXX     XXXXX
+             XXXXXXX
+         XXXXX     XXXXX
+XXXXXXXXXX             XXXXXXXXXX
+XXXXX                        XXXXX
+  XXX                        XXX
+    </pre>
+
+<!-- Pied de page -->
+   <footer>
+	 <table>
+	 <tr>
+            <td><h2> La Cybercriminalité</h2> </td>
+			<td><h2><a href="pages/quisommesnous">Qui sommes nous ?</a></h2></td>
+			<td><h3><a href="mailto:martin.massol@iut-rodez.fr" target="_blank">Un problème, un question ? Contactez nous !</a></h3></td>
+			<td><a href="https://www.facebook.com/cybercriminalite.projet.iutRodez/" target="_blank"><img src="../img/facebook_icon.png" width="15%" alt="logo fb"  /></a></td>
+	 </tr>
+	 <tr>
+		<td>Tout droits réservés</td>
+	</tr>
+	  
+  </footer>
+
+  </div>
+</body>
+</html>
