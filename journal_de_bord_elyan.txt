@@ -8,7 +8,7 @@ Journal de bord: Elyan Poujol
 - Passage sous LESS
 - Hebergement du site sur toile-libre.org (http://cybercriminalite.toile-libre.org)
 
-[17/10/2016]
+[17/11/2016]
 - Architecture du site faite
 - Passage sous du CSS compilé par LESS (le CSS n'est plus compilé a l'affichage)
 
@@ -34,3 +34,14 @@ Journal de bord: Elyan Poujol
 
 [11/12/2016]
 - amélioration mineure du menu à ancres
+
+[14/12/2016]
+- overflow du texte réglé
+
+[15/12/2016]
+- overflow de la page réglé, réparation des répercutions du fix dans la foulée
+- améliorations mineures du site
+
+[04/01/2017]
+- ajout d'ancres pour retourner en haut de page
+- ajouts des textes dans les différentes pages du site

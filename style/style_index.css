@@ -3,6 +3,13 @@
   content: "/";
 }
 
+body {
+  height: auto !important;
+  top: 80px;
+  bottom: 0px;
+  overflow-y: auto;
+}
+
 @media screen and (max-width: 605px) {
   header {
     padding-left: 0px;
