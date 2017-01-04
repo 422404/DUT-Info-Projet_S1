@@ -12,9 +12,21 @@ Journal de bord collectif :
 - Création des comptes sur GitHub pour le partage des données
 - Mise en place du plan par page pour le site (contenu)
 
+[4/11/2016]	Recherche documentaire sur :
+-	Définition de la cybercriminalité
+-	Les différents types de cybercriminels
+-	Les enjeux des cybercriminels
+-	Quelques chiffres et des liens vers des organismes luttant contre la cybercriminalité
+-	Les technologies de l’information et de la communication
+-	Différentes évolutions de la communication. au travers de l'informatique
+-	Comment internet favorise la cybercriminalité
+
 [10/11/2016]
 - Passage sous LESS
 - Hebergement du site sur toile-libre.org (http://cybercriminalite.toile-libre.org)
+
+[12/11/2016]
+Traitement des données en fonction de l’architecture du site internet
 
 [17/10/2016]
 - Architecture du site faite
@@ -27,11 +39,20 @@ Journal de bord collectif :
 [02/12/2016]
 - Ajout de fonctionnalités au site
 
+[04/12/2016]
+Choix des titres des pages + gestion de leurs contenus
+
 [05/12/2016]
 - améliorations du site
 
 [06/12/2016]
 - améliorations du site
+
+[07/12/2016]
+ Adaptation du texte pour en paragraphe distinct pour le site  
+
+[08/12/2016]
+Programmation de la mise en page sur le site
 
 [9/12/2016]
 - améliorations du site
@@ -49,6 +70,9 @@ Journal de bord collectif :
 [15/12/2016]
 - overflow de la page réglé, réparation des répercutions du fix dans la foulée
 - améliorations mineures du site
+
+[16/12/2016]
+placement des textes sur le site
 
 [18/11/2016]
 - modification du code du site et, on commence a mettre le vrai texte dans les pages
