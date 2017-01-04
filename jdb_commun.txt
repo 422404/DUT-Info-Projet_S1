@@ -42,3 +42,34 @@ Journal de bord collectif :
 
 [11/12/2016]
 - amélioration (très) mineures du site
+
+[14/12/2016]
+- overflow du texte réglé
+
+[15/12/2016]
+- overflow de la page réglé, réparation des répercutions du fix dans la foulée
+- améliorations mineures du site
+
+[18/11/2016]
+- modification du code du site et, on commence a mettre le vrai texte dans les pages
+
+[04/01/2017]
+- ajout d'ancres pour retourner en haut de page
+- ajouts des textes dans les différentes pages du site
+
+[29/12/2016]
+-Début création du footer + création de la page Facebook
+
+[2/01/2017] 
+-Footer terminé
+- création de la page " Qui sommes-nous ?" contenant les informations relatives
+aux créateurs et à leur projet.
+
+
+[03/01/2017] 
+-Mise en page de la page des differents hackers 
+-mise en page de la page 2 
+-mise en page de la page 3 
+-mise en page de la page 6 
+-mise en page de la page 8 
+-mise en page de la page 9 
