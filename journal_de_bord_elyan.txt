@@ -42,6 +42,6 @@ Journal de bord: Elyan Poujol
 - overflow de la page réglé, réparation des répercutions du fix dans la foulée
 - améliorations mineures du site
 
-[04/01/2017]
+[03/01/2017]
 - ajout d'ancres pour retourner en haut de page
 - ajouts des textes dans les différentes pages du site
