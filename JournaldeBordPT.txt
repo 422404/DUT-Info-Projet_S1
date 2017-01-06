@@ -15,3 +15,5 @@ mise en page de la page 3 (30 min)
 mise en page de la page 6 (30 min)
 mise en page de la page 8 (30 min)
 mise en page de la page 9 (30 min)
+
+07/01/2017 : Modification du css et des balise <p> (15 min)
