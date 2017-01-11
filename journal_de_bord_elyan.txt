@@ -45,3 +45,7 @@ Journal de bord: Elyan Poujol
 [04/01/2017]
 - ajout d'ancres pour retourner en haut de page
 - ajouts des textes dans les différentes pages du site
+
+[10/01/2017]
+- ajout de google analytics
+- le css dans les balises <p>...</p> à été mis à sa place, dans la feuille de styles adéquat.
