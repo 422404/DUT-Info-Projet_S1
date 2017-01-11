@@ -87,6 +87,11 @@ article p {
   margin-bottom: 2em;
 }
 
+/* alinea pour morgane :) */
+article .alinea {
+  text-indent : 15px
+}
+
 .titre_article {
   position: relative;
   left: -30px;
