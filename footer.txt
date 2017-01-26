@@ -1,0 +1,145 @@
+ <div id="footer3">
+	 
+ <table>
+	 
+	<tr>
+            
+	 <td><h2> La Cybercriminalité</h2> </td>
+			
+         <td><h2><a href="pageinfos.html">Qui sommes nous ?</a></h2></td>
+
+	 <td><h3><a href="https://mail.google.com/mail/u/0/#inbox?compose=159d73d95b2900ea" target="_blank">Un problème, un question ? Contactez nous !</a></h3></td>
+		
+	 <td><a href="https://www.facebook.com/cybercriminalite.projet.iutRodez/" target="_blank"><img src="../img/facebook_icon.png" width="15%" alt="logo fb"  /></a></td>
+	 
+        </tr>
+
+	<tr>
+
+         <td colspan="4">Tout droits réservés - 2017</td>
+	
+        </tr>
+	
+ </div>
+
+
+
+
+/********** pied de page **********/
+
+
+footer { 
+  
+  background:#DEB887;
+  
+  position:fixed;
+  
+  bottom:0px;
+ 
+  left: 0;
+  right: 0;
+ 
+  height:130px;
+  
+  color:black;
+  
+
+}
+
+
+table {
+ 
+  width: 95%;
+  
+  text-align:center;
+
+}
+
+
+td {
+  
+  width: 20%;
+
+}	
+
+
+a {
+  
+  color:black;	
+
+}
+
+
+a:link { 
+
+  text-decoration:none;
+
+} 
+
+
+a:hover {
+  color: #4682B4
+}
+
+
+
+/* footer pages _base; */
+
+
+#footer { 
+  
+  background:#DEB887;
+  
+  position:absolute;
+  
+  bottom:-75%;
+  
+  left: 0;
+  
+  right: 0;
+  
+  height:130px;
+ 
+  color:black;
+  
+}
+
+
+#footer2 { 
+  
+  background:#DEB887;
+
+  position:absolute;
+ 
+  bottom:-210%;
+  
+  left: 0;
+  
+  right: 0;
+ 
+  height:130px;
+  
+  color:black;
+  
+
+}
+
+
+#footer3 { 
+ 
+  background:#DEB887;
+ 
+  position:absolute;
+  
+  bottom:-150%;
+  
+  left: 0;
+ 
+  right: 0;
+  
+  height:130px;
+ 
+  color:black;
+  
+
+}
