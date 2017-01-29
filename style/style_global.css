@@ -167,18 +167,20 @@ footer {
   width: 100%;
   min-height: 80px;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 15px 20px 20px 5px;
+  padding: 10px 20px 20px 10px;
   color: #f5f5f5;
   font-weight: bold;
-}
-
-#membres {
   text-align: center;
   font-size: 0.7em;
 }
 
-footer .footer_link {
-  font-size: 0.7em;
+footer img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+footer p:last-child {
+  margin-bottom: 10px;
 }
 
 /********** formulaire changement de thème **********/

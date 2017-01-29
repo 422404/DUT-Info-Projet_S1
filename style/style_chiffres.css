@@ -1,5 +1,6 @@
-p img {
+article p img {
   margin: auto;
+  margin-bottom: 15px;
   width: 80%;
   max-width: 600px;
   display: block;
