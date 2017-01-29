@@ -1,16 +1,33 @@
 <!DOCTYPE html>
-<html>
-<head lang="fr">
+<html lang="fr" data-ng-app="app" data-ng-controller="ctrl">
   <title>La Cybercriminalité</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#990000" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="./script/script_theme.js" type="text/javascript"></script>
   <meta name="keywords" content="cybercriminalité" />
   <meta name="description" content="Un site internet traitant de la cybercriminalité réalisé par des étudiant de première année d'IUT Informatique." />
   <link rel="stylesheet" type="text/css" href="./style/style_global.css" />
   <link rel="stylesheet" type="text/css" href="./style/style_index.css" />
   <link rel="stylesheet" type="text/css" href="./style/style_menus.css" />
-  <link rel="stylesheet" type="text/css" href="../style/font-awesome-4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="./style/font-awesome-4.7.0/css/font-awesome.min.css" />
+  
+  <style>
+  /* global */
+  body {
+    background-color: {{colorBackground}} !important;
+    color: {{colorText}} !important;
+  }
+  
+  header {
+    background-color: {{colorHeader}} !important;
+  }
+  
+  #theme_changer {
+    border-left-color: {{colorHeader}} !important;
+  }
+  </style>
 </head>
 
 <body>
@@ -23,9 +40,8 @@
   <!-- Menu -->
   <nav id="inline_menu">
 	<div  class="item">
-	  <div  class="item">
 	  <div class="link_container">
-        <a href="./pages/presentation.html" class="link_box">
+        <a data-ng-href="./pages/presentation.html{{param}}" class="link_box">
 		  <h2 class="link_text">Présentation du site</h2>
   	    </a>
       </div>  
@@ -33,7 +49,7 @@
 	  
 	<div  class="item">
 	  <div class="link_container">
-        <a href="./pages/generalites.html" class="link_box">
+        <a data-ng-href="./pages/generalites.html{{param}}" class="link_box">
 		  <h2 class="link_text">Généralités</h2>
   	    </a>
       </div>  
@@ -41,7 +57,7 @@
 	  
 	<div  class="item">
 	  <div class="link_container">
-        <a href="./pages/faits_divers.html" class="link_box">
+        <a data-ng-href="./pages/faits_divers.html{{param}}" class="link_box">
 		  <h2 class="link_text">Faits divers</h2>
   	    </a>
       </div>  
@@ -49,7 +65,7 @@
 	  
 	<div  class="item">
 	  <div class="link_container">
-        <a href="./pages/chiffres.html" class="link_box">
+        <a data-ng-href="./pages/chiffres.html{{param}}" class="link_box">
 		  <h2 class="link_text">Quelques chiffres</h2>
   	    </a>
       </div>  
@@ -57,7 +73,7 @@
 	
 	<div  class="item">
 	  <div class="link_container">
-        <a href="./pages/liens.html" class="link_box">
+        <a data-ng-href="./pages/liens.html{{param}}" class="link_box">
 		  <h2 class="link_text">Liens</h2>
   	    </a>
       </div>  
@@ -65,7 +81,7 @@
 	  
 	<div  class="item">
 	  <div class="link_container">
-        <a href="./pages/types_attaques.html" class="link_box">
+        <a data-ng-href="./pages/types_attaques.html{{param}}" class="link_box">
 		  <h2 class="link_text">Les types d'attaques</h2>
   	    </a>
       </div>  
@@ -73,7 +89,7 @@
 	  
 	<div  class="item">
 	  <div class="link_container">
-        <a href="./pages/categories_hackers.html" class="link_box">
+        <a data-ng-href="./pages/categories_hackers.html{{param}}" class="link_box">
 		  <h2 class="link_text">Catégories de hackers</h2>
   	    </a>
       </div>  
@@ -81,7 +97,7 @@
 	  
 	<div  class="item">
 	  <div class="link_container">
-        <a href="./pages/cybercrimes.html" class="link_box">
+        <a data-ng-href="./pages/cybercrimes.html{{param}}" class="link_box">
 		  <h2 class="link_text">Exemples de cybercrimes</h2>
   	    </a>
       </div>
@@ -89,14 +105,73 @@
 	  
 	<div  class="item">
 	  <div class="link_container">
-        <a href="./pages/internet.html" class="link_box">
+        <a data-ng-href="./pages/internet.html{{param}}" class="link_box">
 		  <h2 class="link_text">Internet et la cybercriminalité</h2>
   	    </a>
       </div>	  
 	</div>
   </nav>
+  
+  <form id="theme_changer">
+      <table>
+        <tr>
+          <td>
+            Theme : 
+          </td>
+          <td>
+            <select data-ng-model="theme" data-ng-change="updateLink()">
+            <option value="custom">Personnalisé</option>
+            <option value="red">Rouge (base)</option>
+            <option value="green">Vert</option>
+            </select>
+          </td>
+        </tr>
 
-  <pre id="skull" class="unselectable"> 
+        <tr>
+          <td>
+            Fond : 
+          </td>
+          <td>
+            <input class="colorTextInput" data-ng-model="colorInputBackground" size="8" />
+            <input class="colorInput" type="color" data-ng-model="colorInputBackground" data-ng-bind="colorInputBackground" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Entête : 
+          </td>
+          <td>
+            <input class="colorTextInput" data-ng-model="colorInputHeader" size="8" />
+            <input class="colorInput" type="color" data-ng-model="colorInputHeader" data-ng-bind="colorInputHeader" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Article : 
+          </td>
+          <td>
+            <input class="colorTextInput" data-ng-model="colorInputArticle" size="8" />
+            <input class="colorInput" type="color" data-ng-model="colorInputArticle" data-ng-bind="colorInputArticle" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Texte :
+          </td>
+          <td>
+            <input class="colorTextInput" data-ng-model="colorInputText" size="8" />
+            <input class="colorInput" type="color" data-ng-model="colorInputText" data-ng-bind="colorInputText" />
+          </td>
+        </tr>
+      </table>
+      <br />
+	  <div><a data-ng-href="{{param}}" data-ng-click="updateLink();reload();">Appliquer</a></div>
+    </form>
+
+  <pre id="skull" class="unselectable">
          _______________
         /               \
        /                 \
@@ -126,7 +201,27 @@ XXXXX                        XXXXX
 
   <!-- Pied de page -->
   <footer>
-    <p id="footer_text">Pierre Romestant - Morgane Tuffery - Elyan Poujol - Martin Massol - 2016/2017</p>
+    <p id="membres">Pierre Romestant - Morgane Tuffery - Elyan Poujol - Martin Massol</p>
+	<table>
+	  <tr>
+        <td>
+		  <a href="pageinfos.html">Qui sommes nous ?</a>
+		</td>
+
+	    <td>
+		  <a href="https://mail.google.com/mail/u/0/#inbox?compose=159d73d95b2900ea" target="_blank">Un problème, un question ? Contactez nous !</a>
+		</td>
+		
+	   <td>
+	     <a href="https://www.facebook.com/cybercriminalite.projet.iutRodez/" target="_blank">
+		   <img src="./img/facebook_icon.png" width="15%" alt="logo fb"  />
+		 </a>
+	  </td>
+	</tr>
+
+	<tr>
+      <td colspan="4">Tout droits réservés - 2017</td>
+    </tr>
   </footer>
 
   <script>

@@ -48,4 +48,21 @@ Journal de bord: Elyan Poujol
 
 [10/01/2017]
 - ajout de google analytics
-- le css dans les balises <p>...</p> à été mis à sa place, dans la feuille de styles adéquat.
+- le css dans les balises <p>...</p> à été mis à sa place, dans la feuille de styles adéquat
+
+[12/01/2017]
+- ajout d'un fichier robots.txt pour les crawlers des moteurs de recherches
+- ajout d'un fichier sitemap.xml pour les crawlers (indexation des pages)
+- modification du pied de page
+
+[22/01/2017]
+- développement d'un formulaire AngularJS permettant de modifier le thème du site
+
+
+[25/01/2017]
+- implémentation du formulaire dans le site, tests et mise en page du formulaire
+
+[27/01/2017]
+- correction de certaines erreurs et validation du formulaire de changement de thème ainsi que du code le changeant
+- ajout de liens utiles (page facebook, site de l'iut, mail) au pied de page
+- modification du pied de page

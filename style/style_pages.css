@@ -2,3 +2,9 @@
 #section_title::before {
   content: "/La Cybercriminalité/";
 }
+
+@media screen and (max-width: 700px) {
+  #section_title::before {
+    content: "/";
+  }
+}
