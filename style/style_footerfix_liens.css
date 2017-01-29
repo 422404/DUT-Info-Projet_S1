@@ -1,0 +1,10 @@
+/* il n'y a pas assez de contenu dans la page pour que le footer soit en bas de page */
+footer {
+  position: absolute;
+}
+
+@media screen and (min-height: 670px) {
+  footer {
+    bottom: 0px;
+  }
+}

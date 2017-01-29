@@ -1,15 +1,62 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-ng-app="app" data-ng-controller="ctrl">
 <head>
   <title>La Cybercriminalité</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#990000">
+  <meta name="keywords" content="cybercriminalité" />
+  <meta name="description" content="Un site internet traitant de la cybercriminalité réalisé par des étudiants de première année d'IUT Informatique." />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="../script/script_theme.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="../style/style_global.css" />
   <link rel="stylesheet" type="text/css" href="../style/style_pages.css" />
   <link rel="stylesheet" type="text/css" href="../style/style_menus.css" />
-  <link rel="stylesheet" type="text/css" href="../style/style_global.css" />
   <link rel="stylesheet" type="text/css" href="../style/font-awesome-4.7.0/css/font-awesome.min.css" />
   <script src="../script/script_menus.js" type="text/javascript"></script>
+  
+  <style>
+  /* global */
+  body {
+    background-color: {{colorBackground}} !important;
+    color: {{colorText}} !important;
+  }
+  
+  header {
+    background-color: {{colorHeader}} !important;
+  }
+  
+  article {
+    background-color: {{colorArticle}} !important;
+  }
+  
+  .titre_article {
+    background-color: {{colorHeader}} !important;
+    border-color: {{colorBackground}} !important;
+  }
+  
+  .haut_page_icone {
+    background-color: {{colorHeader}} !important;
+  }
+  
+  /* menus */
+  .menu_current {
+    background-color: {{colorHeader}} !important;
+    border-color: {{colorHeader}} !important;
+  }
+  
+  @media screen and (max-width: 600px) {
+    #menu_anchors .jump {
+      border-top: 3px solid {{colorBackground}} !important;
+      background-color: {{colorHeader}} !important;
+	}
+  }
+  
+  /* formulaire theme */
+  #theme_changer {
+    border-left-color: {{colorHeader}} !important;
+  }
+  </style>
 </head>
 
 <body>
@@ -20,45 +67,104 @@
 
 <!-- Menu -->
   <nav data-state="closed_menu" id="menu">	
-    <h3 id="menu_home"><a href="../index.html">/Accueil:</a></h3>
+    <h3 id="menu_home"><a data-ng-href="../index.html{{param}}">/Accueil:</a></h3>
 	<hr />
     <ul class="list">
 	  <li class="item">
-	    <a href="presentation.html" class="link">Présentation</a>
-	  </li>
+	    <a data-ng-href="presentation.html{{param}}" class="link">Présentation</a>
+	  </li><br />
 	  
 	  <li class="item">
-	    <a href="generalites.html" class="link">Généralités</a>
-	  </li>
+	    <a data-ng-href="generalites.html{{param}}" class="link">Généralités</a>
+	  </li><br />
 	  
 	  <li class="item">
 	    <span class="link menu_current">Faits divers</span>
-	  </li>
+	  </li><br />
 	  
 	  <li class="item">
-	    <a href="chiffres.html" class="link">Quelques chiffres</a>
-	  </li>
+	    <a data-ng-href="chiffres.html{{param}}" class="link">Quelques chiffres</a>
+	  </li><br />
 	  
 	  <li class="item">
-	    <a href="liens.html" class="link">Liens</a>
-	  </li>
+	    <a data-ng-href="liens.html{{param}}" class="link">Liens</a>
+	  </li><br />
 
 	  <li class="item">
-	    <a href="types_attaques.html" class="link">Les types d'attaques</a>
-	  </li>
+	    <a data-ng-href="types_attaques.html{{param}}" class="link">Les types d'attaques</a>
+	  </li><br />
 	  
 	  <li class="item">
-	    <a href="categories_hackers.html" class="link">Catégories de hackers</a>
-	  </li>
+	    <a data-ng-href="categories_hackers.html{{param}}" class="link">Catégories de hackers</a>
+	  </li><br />
 
 	  <li class="item">
-	    <a href="cybercrimes.html" class="link">Exemples</a>
-	  </li>
+	    <a data-ng-href="cybercrimes.html{{param}}" class="link">Exemples</a>
+	  </li><br />
 	  
 	  <li class="item">
-	    <a href="internet.html" class="link">Internet</a>
-	  </li>
+	    <a data-ng-href="internet.html{{param}}" class="link">Internet</a>
+	  </li><br />
     </ul>
+	
+	<form id="theme_changer">
+      <table>
+        <tr>
+          <td>
+            Theme : 
+          </td>
+          <td>
+            <select data-ng-model="theme" data-ng-change="updateLink()">
+            <option value="custom">Personnalisé</option>
+            <option value="red">Rouge (base)</option>
+            <option value="green">Vert</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Fond : 
+          </td>
+          <td>
+            <input class="colorTextInput" data-ng-model="colorInputBackground" size="8" />
+            <input class="colorInput" type="color" data-ng-model="colorInputBackground" data-ng-bind="colorInputBackground" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Entête : 
+          </td>
+          <td>
+            <input class="colorTextInput" data-ng-model="colorInputHeader" size="8" />
+            <input class="colorInput" type="color" data-ng-model="colorInputHeader" data-ng-bind="colorInputHeader" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Article : 
+          </td>
+          <td>
+            <input class="colorTextInput" data-ng-model="colorInputArticle" size="8" />
+            <input class="colorInput" type="color" data-ng-model="colorInputArticle" data-ng-bind="colorInputArticle" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Texte :
+          </td>
+          <td>
+            <input class="colorTextInput" data-ng-model="colorInputText" size="8" />
+            <input class="colorInput" type="color" data-ng-model="colorInputText" data-ng-bind="colorInputText" />
+          </td>
+        </tr>
+      </table>
+      <br />
+	  <div><a data-ng-href="{{param}}" data-ng-click="updateLink();reload();">Appliquer</a></div>
+    </form>
   </nav>
 
 <!-- Contenu principal -->
@@ -66,7 +172,7 @@
   
 <!-- Titre -->
     <header>
-	  <a href="../index.html"><h2 id="return">../</h2></a>
+	  <a data-ng-href="../index.html{{param}}"><h2 id="return">../</h2></a>
       <br />
       <h2 id="section_title">Faits divers</h2>
       <br />
@@ -76,118 +182,89 @@
       <article id="faits_divers">
         <h3 class="titre_article">Fait divers</h3>
 
-        <p class="alinea">
-	    -	5 entreprises sur 6 employant plus de 2 500 personnes ont été la 
-		cible de cyberattaques en 2014 </p>
-		<p class="alinea">
-		-	Entre 2013 et 2014, le nombre des cyberattaques a augmenté de 120% 
-		dans le monde et le coût estimé de la cybercriminalité pour les 
-		entreprises s’élève en moyenne à 7,6 millions de dollars par an, soit 
-		une augmentation de 10% </p>
-		<p class="alinea">
-		-	61 % des victimes d’une attaque DDoS ont temporairement perdu 
-		l’accès à des informations critiques </p>
-		<p class="alinea">
-		-	38 % ont été dans l’incapacité de poursuivre leur activité 
-		principale</p>
-		<p class="alinea">
-		-	33 % font état de pertes d’opportunités et de contrats </p>
-		<p class="alinea">
-		-	Dans 29 % des cas, le succès d’une attaque DDoS a eu un impact 
-		négatif sur la cote de crédit de l’entreprise </p>
-		<p class="alinea">
-		-	Dans 26 % des cas, a entraîné une augmentation de ses primes 
-		d’assurance </p>
-		<p class="alinea">
-		-	A la suite d’une attaque DDOS, 49 % ont payé pour faire modifier 
-		leur infrastructure informatique, 46 % ont eu recours à leurs avocats 
-		et 41 % ont fait appel à des gestionnaires de risque </p>
-		<p class="alinea">
-		-	72 % des victimes ont divulgué des informations relatives à une 
-		attaque DDoS contre leurs ressources. En particulier, 43 % des 
-		responsables interrogés ont informé leurs clients d’un incident, 36 % 
-		l’ont signalé aux autorités et 26 % en ont parlé aux médias. 38 % des 
-		entreprises ont subi une atteinte à leur réputation à la suite d’une 
-		attaque DDoS et près d’une sur trois a dû demander l’aide de 
-		conseillers en image </p>
-		<p class="alinea">
-		-	48 % des attaques cibleraient directement des applications web des 
-		e-commerçants. </p>
-		<p class="alinea">
-		-	40 % des attaques par injection SQL et 64 % des campagnes de trafic
-		http malveillant concernent les sites de commerce en ligne. </p>
-		<p class="alinea">
-		-	Selon l’enquête d’Imperva, les sites de commerce en ligne sont 
-		attaqués deux fois plus souvent que des sites plus classiques. Les 
-		attaques durent aussi plus longtemps : près de deux fois plus longtemps
-		qu’en 2013. </p>
-		<p class="alinea">
-		-	68% des internautes envisagent un achat sur internet d’ici la fin 
-		de l’année. </p>
-		<p class="alinea">
-		-	La valeur économique pillée par la cybercriminalité en 2013 
-		représente 190 milliards d’euros. </p>
-		<p class="alinea">
-		-	Pour illustrer un coût :<br />
-		« Sony s’est fait voler 1,5 million de données de cartes bleues. Le 
-		dommage direct : 150 millions. Mais Sony réclame à son assureur  1,3 
-		milliard de dollars pour compenser l’arrêt complet de leur serveur 
-		pollué de e-commerce, c’est-à-dire de leurs ventes, la modification de 
-		leur système d’information et la campagne de communication qui a suivi.
-		»</p>
-		<p class="alinea">
-		-	Après avoir analysé les données de plus de 100.000 incidents de 
-		sécurité sur 10 ans, Verizon a indiqué que 92 % des attaques peuvent 
-		être réparties en 9 types de menaces (les attaques de malwares, la 
-		perte ou le vol d’appareils, les attaques DDoS, les arnaques à la carte
-		bancaire, les attaques d’applications web, le cyber-espionnage, les 
-		intrusions, le vol interne et les erreurs humaines), ce qui signifie 
-		que les entreprises font toujours face aux mêmes risques et aux mêmes 
-		attaques, depuis tout ce temps, et à plusieurs reprises.<br /> 
-		Les fraudes en ligne par carte bancaire ont représenté 64,6% du total 
-		des fraudes en 2013, soit un rapport de un à vingt par rapport aux 
-		magasins physiques. </p>
-		<p sclass="alinea">
-		-	Les e-commerçants ne sont que 43 % à utiliser ces méthodes de 
-		protection renforcés (par SMS ou par biométrie) 10 millions de français
-		, 33% des Internautes majeurs victimes de cybercrime (Symantec/Norton 
-		2013).</p>
-		<p class="alinea">
-		-	Les condamnations d’entreprises ayant piraté des logiciels se sont 
-		élevées à 1,3 millions d’euros en 2013, en hausse de 30% par rapport à 
-		2012, représentant 12% du montant des condamnations européennes. </p>
-		<p class="alinea">
-		-	En juin 2014, 3,2 millions de premiers avertissements ont été 
-		expédiés depuis sa création et 333.723 deuxièmes avertissements (lettre
-		recommandée) et 71 dossiers transmis à la justice. </p>
-		<p class="alinea">
-		-	75 % des messages partent de machines classiques (ordinateurs de 
-		bureau ou portables, smartphones, tablettes), le reste provient 
-		d’appareils connectés. </p>
-		<p class="alinea">
-		-	Dans 33% des cas, l’introduction d’un malware est réalisée au 
-		travers d’une application mobile. </p>
-		<p class="alinea">
-		-	58% des entreprises pointent l’inefficacité des antivirus du marché
-		pour lutter contre les malwares. </p>
-		<p class="alinea">
-		-	56% des PC sont infectés via des emails de type « phishing  ».</p>
-		<p class="alinea">
-		-	40% des infections par Malware sont dues aux sites pornographiques.</p>
-		<p class="alinea">
-		-	Plus de 30% de nos ordinateurs personnels stockent des fichiers 
-		illicites à notre insu. .</p>
-		<p class="alinea">
-		-	61% des sites malveillants sont en fait des sites institutionnels.
-		</p>
-		<p class="alinea">
-		-	1 site Internet sur 500 est infecté par de malwares </p>
-		<p class="alinea">
-		-	Google bloque 10000 sites Internet par jour </p>
-		<p class="alinea">
-		-	400 Millions de personnes sont concernées par des cyberattaques 
-		chaque année </p>
-
+		<ul>
+          <li>5 entreprises sur 6 employant plus de 2 500 personnes ont été la 
+		  cible de cyberattaques en 2014</li><br />
+	  	  <li>Entre 2013 et 2014, le nombre des cyberattaques a augmenté de 120% 
+          dans le monde et le coût estimé de la cybercriminalité pour les 
+		  entreprises s’élève en moyenne à 7,6 millions de dollars par an, soit 
+		  une augmentation de 10%</li><br />
+		  <li>61 % des victimes d’une attaque DDoS ont temporairement perdu 
+		  l’accès à des informations critiques</li><br />
+		  <li>38 % ont été dans l’incapacité de poursuivre leur activité 
+		  principale</li><br />
+		  <li>33 % font état de pertes d’opportunités et de contrats</li><br />
+		  <li>Dans 29 % des cas, le succès d’une attaque DDoS a eu un impact 
+		  négatif sur la cote de crédit de l’entreprise</li><br />
+		  <li>Dans 26 % des cas, a entraîné une augmentation de ses primes 
+		  d’assurance</li><br />
+		  <li>A la suite d’une attaque DDOS, 49 % ont payé pour faire modifier 
+		  leur infrastructure informatique, 46 % ont eu recours à leurs avocats 
+		  et 41 % ont fait appel à des gestionnaires de risque</li><br />
+		  <li>72 % des victimes ont divulgué des informations relatives à une 
+		  attaque DDoS contre leurs ressources. En particulier, 43 % des 
+		  responsables interrogés ont informé leurs clients d’un incident, 36 % 
+		  l’ont signalé aux autorités et 26 % en ont parlé aux médias. 38 % des 
+		  entreprises ont subi une atteinte à leur réputation à la suite d’une 
+		  attaque DDoS et près d’une sur trois a dû demander l’aide de 
+		  conseillers en image</li><br />
+		  <li>48 % des attaques cibleraient directement des applications web des 
+		  e-commerçants.</li><br />
+		  <li>40 % des attaques par injection SQL et 64 % des campagnes de trafic
+		  http malveillant concernent les sites de commerce en ligne.</li><br />
+		  <li>Selon l’enquête d’Imperva, les sites de commerce en ligne sont 
+		  attaqués deux fois plus souvent que des sites plus classiques. Les 
+		  attaques durent aussi plus longtemps : près de deux fois plus longtemps
+		  qu’en 2013.</li><br />
+		  <li>68% des internautes envisagent un achat sur internet d’ici la fin 
+		  de l’année.</li><br />
+		  <li>La valeur économique pillée par la cybercriminalité en 2013 
+		  représente 190 milliards d’euros.</li><br />
+		  <li>Pour illustrer un coût :<br />
+		  « Sony s’est fait voler 1,5 million de données de cartes bleues. Le 
+		  dommage direct : 150 millions. Mais Sony réclame à son assureur  1,3 
+		  milliard de dollars pour compenser l’arrêt complet de leur serveur 
+		  pollué de e-commerce, c’est-à-dire de leurs ventes, la modification de 
+		  leur système d’information et la campagne de communication qui a suivi.
+		  »</li><br />
+		  <li>Après avoir analysé les données de plus de 100.000 incidents de 
+		  sécurité sur 10 ans, Verizon a indiqué que 92 % des attaques peuvent 
+		  être réparties en 9 types de menaces (les attaques de malwares, la 
+		  perte ou le vol d’appareils, les attaques DDoS, les arnaques à la carte
+		  bancaire, les attaques d’applications web, le cyber-espionnage, les 
+		  intrusions, le vol interne et les erreurs humaines), ce qui signifie 
+		  que les entreprises font toujours face aux mêmes risques et aux mêmes 
+		  attaques, depuis tout ce temps, et à plusieurs reprises.<br /> 
+		  Les fraudes en ligne par carte bancaire ont représenté 64,6% du total 
+		  des fraudes en 2013, soit un rapport de un à vingt par rapport aux 
+		  magasins physiques.</li><br />
+		  <li>Les e-commerçants ne sont que 43 % à utiliser ces méthodes de 
+		  protection renforcés (par SMS ou par biométrie) 10 millions de français
+		  , 33% des Internautes majeurs victimes de cybercrime (Symantec/Norton 
+		  2013).</li><br />
+		  <li>Les condamnations d’entreprises ayant piraté des logiciels se sont 
+		  élevées à 1,3 millions d’euros en 2013, en hausse de 30% par rapport à 
+		  2012, représentant 12% du montant des condamnations européennes.</li><br />
+		  <li>En juin 2014, 3,2 millions de premiers avertissements ont été 
+		  expédiés depuis sa création et 333.723 deuxièmes avertissements (lettre
+		  recommandée) et 71 dossiers transmis à la justice.</li><br />
+		  <li>75 % des messages partent de machines classiques (ordinateurs de 
+		  bureau ou portables, smartphones, tablettes), le reste provient 
+		  d’appareils connectés.</li><br />
+		  <li>Dans 33% des cas, l’introduction d’un malware est réalisée au 
+		  travers d’une application mobile.</li><br />
+		  <li>58% des entreprises pointent l’inefficacité des antivirus du marché
+		  pour lutter contre les malwares.</li><br />
+		  <li>56% des PC sont infectés via des emails de type « phishing  ».</li><br />
+		  <li>40% des infections par Malware sont dues aux sites pornographiques.</li><br />
+		  <li>Plus de 30% de nos ordinateurs personnels stockent des fichiers 
+		  illicites à notre insu. .</li><br />
+		  <li>61% des sites malveillants sont en fait des sites institutionnels.</li><br />
+		  <li>1 site Internet sur 500 est infecté par de malwares</li><br />
+		  <li>Google bloque 10000 sites Internet par jour</li><br />
+		  <li>400 Millions de personnes sont concernées par des cyberattaques 
+		  chaque année</li><br />
+        </ul>
         <span onclick="page.scrollTop = 0" class="haut_page">
 	      <i class="haut_page_icone fa fa-chevron-circle-up" aria-hidden="true"></i>
 	    </span>
@@ -224,9 +301,13 @@ XXXXX                        XXXXX
 
 <!-- Pied de page -->
     </section>
-      <footer>
-        <h5 id="footer_text">Pierre Romestant - Morgane Tuffery - Elyan Poujol - Martin Massol - 2016</h5>
-      </footer>
+    <footer>
+      <p id="membres">Pierre Romestant - Morgane Tuffery - Elyan Poujol - Martin Massol</p>
+	  <p><a href="https://www.facebook.com/cybercriminalite.projet.iutRodez/" target="_blank">
+	  Retrouvez-nous sur Facebook<img src="../img/fb_logo__blue_58.png" /></p>
+	  <p><a href="http://www.iut-rodez.fr/" target="_blank">IUT de Rodez</a></p>
+	  <p>2016/2017</p>
+    </footer>
   </div>
   
   <script>

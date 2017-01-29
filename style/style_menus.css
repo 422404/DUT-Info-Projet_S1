@@ -168,12 +168,9 @@
   margin: 10px;
   display: inline-block;
   border: 2px solid white;
-  /*border-radius: 3px;*/
   color: white;
   text-decoration: none;
   cursor: pointer;
-  /*text-align: left;
-  padding-left: 20px;*/
 }
 
 #menu_anchors .jump:hover {

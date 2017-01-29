@@ -31,12 +31,12 @@ header {
 }
 
 header a {
-  color: white;
+  color: inherit;
   text-decoration: none;
 }
 
 header a:visited {
-  color: white;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -45,7 +45,7 @@ header a:visited {
 }
 
 #return {
-  color: #ffffff;
+  color: inherit;
   display: inline;
 }
 
@@ -64,19 +64,13 @@ header a:visited {
   cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
-  #section_title::before {
-    content: "/";
-  }
-}
-
 /********** rubriques **********/
 article {
   position: relative;
   margin: auto;
   margin-top: 100px;
   width: 50%;
-  background-color: rgba(191, 0, 0, 0.5);
+  background-color: rgba(205, 0, 0, 0.5);
   padding: 0.5em;
   border-radius: 0px 10px 0px 10px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
@@ -87,7 +81,6 @@ article p {
   margin-bottom: 2em;
 }
 
-/* alinea pour morgane :) */
 article .alinea {
   text-indent : 15px
 }
@@ -101,7 +94,7 @@ article .alinea {
   display: inline-block;
   border: 3px solid #660000;
   border-radius: 5px;
-  color: white;
+  color: inherit;
   margin: 0px;
   text-decoration: underline;
 }
@@ -169,19 +162,67 @@ article .alinea {
 
 /********** pied de page **********/
 footer {
-  margin: 40px 0px 10px 0px;
+  position: relative;
+  margin: 40px 0px 0px 0px;
   width: 100%;
-  height: 30px;
-}
-
-#footer_text {
-  text-align: center;
-  margin-bottom: 10px;
+  min-height: 80px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px 20px 10px;
   color: #f5f5f5;
-  font-size: 0.7em;
   font-weight: bold;
+  text-align: center;
+  font-size: 0.7em;
 }
 
+footer img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+footer p:last-child {
+  margin-bottom: 10px;
+}
+
+/********** formulaire changement de thème **********/
+#theme_changer {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 220px;
+  height: 180px;
+  padding: 5px 5px 10px 5px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-left: 5px solid #990000;
+  font-size: 0.8em;
+  display: block;
+}
+
+#theme_changer a {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#theme_changer .colorInput {
+  width: 48px;
+  height: 24px;
+}
+
+#theme_changer a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+#theme_changer a:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+#theme_changer div {
+  text-align: center;
+}
 /********** crane ascii **********/
 #skull {
   position: fixed;

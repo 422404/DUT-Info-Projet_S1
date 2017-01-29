@@ -1,4 +1,4 @@
-/* for the main menu on pages */
+/* pour le menu des pages */
 // http://w3c.github.io/html/single-page.html#embedding-custom-non-visible-data-with-the-data-attributes
 function toggleMenu() {
   var menu = document.getElementById('menu');
@@ -34,7 +34,7 @@ function openMenu() {
 }
 
 /***************************************************************************************/
-/* for the anchors menu on certain pages */
+/* pour le menu d'ancres */
 function toggleAnchorsMenu() {
   var menu_anchors = document.getElementById('menu_anchors');
 
@@ -64,7 +64,7 @@ function openAnchorsMenu() {
   menu_anchors_title_arrow.className = "fa fa-caret-up";
 }
 
-// fix the max-height issue when anchors menu is opened-closed and then the page is resized > 600px
+// règle le problème qui résulte d'une ouverture + fermeture du menu et d'un redimensionnement supérieur à 600px
 function anchorsMenuFixup() {
   var menu_anchors = document.getElementById('menu_anchors');
 

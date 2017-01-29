@@ -14,6 +14,6 @@ function jumpToAnchor(anchorName) {
   if (window.matchMedia("(max-width:600px)").matches && menu_anchors.dataset.state == "opened_menu") {
     closeAnchorsMenu();
   }
-  window.page.scrollTop += getTopOffset(anchorName) - 20; // 110 == headerSize + 20
+  window.page.scrollTop += getTopOffset(anchorName) - 20; // 110 == taille du header + 20
   console.log(page.scrollTop);
 }

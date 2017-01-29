@@ -1,15 +1,64 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-ng-app="app" data-ng-controller="ctrl">
 <head>
   <title>La Cybercriminalité</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#990000">
+  <meta name="keywords" content="cybercriminalité" />
+  <meta name="description" content="Un site internet traitant de la cybercriminalité réalisé par des étudiants de première année d'IUT Informatique." />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="../script/script_theme.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="../style/style_global.css" />
   <link rel="stylesheet" type="text/css" href="../style/style_pages.css" />
   <link rel="stylesheet" type="text/css" href="../style/style_menus.css" />
-  <link rel="stylesheet" type="text/css" href="../style/style_global.css" />
+  <link rel="stylesheet" type="text/css" href="../style/style_footerfix_presentation.css" />
   <link rel="stylesheet" type="text/css" href="../style/font-awesome-4.7.0/css/font-awesome.min.css" />
   <script src="../script/script_menus.js" type="text/javascript"></script>
+  <script src="../script/script_analytics.js" type="text/javascript"></script>
+
+  <style>
+  /* global */
+  body {
+    background-color: {{colorBackground}} !important;
+    color: {{colorText}} !important;
+  }
+  
+  header {
+    background-color: {{colorHeader}} !important;
+  }
+  
+  article {
+    background-color: {{colorArticle}} !important;
+  }
+  
+  .titre_article {
+    background-color: {{colorHeader}} !important;
+    border-color: {{colorBackground}} !important;
+  }
+  
+  .haut_page_icone {
+    background-color: {{colorHeader}} !important;
+  }
+  
+  /* menus */
+  .menu_current {
+    background-color: {{colorHeader}} !important;
+    border-color: {{colorHeader}} !important;
+  }
+  
+  @media screen and (max-width: 600px) {
+    #menu_anchors .jump {
+      border-top: 3px solid {{colorBackground}} !important;
+      background-color: {{colorHeader}} !important;
+	}
+  }
+  
+  /* formulaire theme */
+  #theme_changer {
+    border-left-color: {{colorHeader}} !important;
+  }
+  </style>
 </head>
 
 <body>
@@ -19,46 +68,105 @@
   </div>
 
 <!-- Menu -->
-  <nav data-state="closed_menu" id="menu">	
-    <h3 id="menu_home"><a href="../index.html">/Accueil:</a></h3>
-	<hr />
+  <nav data-state="closed_menu" id="menu">  
+    <h3 id="menu_home"><a data-ng-href="../index.html{{param}}">/Accueil:</a></h3>
+    <hr />
     <ul class="list">
-	  <li class="item">
-	    <span class="link menu_current">Présentation</span>
-	  </li>
-	  
-	  <li class="item">
-	    <a href="generalites.html" class="link">Généralités</a>
-	  </li>
-	  
-	  <li class="item">
-	    <a href="faits_divers.html" class="link">Faits divers</a>
-	  </li>
-	  
-	  <li class="item">
-	    <a href="chiffres.html" class="link">Quelques chiffres</a>
-	  </li>
-	  
-	  <li class="item">
-	    <a href="liens.html" class="link">Liens</a>
-	  </li>
+      <li class="item">
+        <span class="link menu_current">Présentation</span>
+      </li>
+      
+      <li class="item">
+        <a data-ng-href="generalites.html{{param}}" class="link">Généralités</a>
+      </li>
+      
+      <li class="item">
+        <a data-ng-href="faits_divers.html{{param}}" class="link">Faits divers</a>
+      </li>
+      
+      <li class="item">
+        <a data-ng-href="chiffres.html{{param}}" class="link">Quelques chiffres</a>
+      </li>
+      
+      <li class="item">
+        <a data-ng-href="liens.html{{param}}" class="link">Liens</a>
+      </li>
 
-	  <li class="item">
-	    <a href="types_attaques.html" class="link">Les types d'attaques</a>
-	  </li>
-	  
-	  <li class="item">
-	    <a href="categories_hackers.html" class="link">Catégories de hackers</a>
-	  </li>
+      <li class="item">
+        <a data-ng-href="types_attaques.html{{param}}" class="link">Les types d'attaques</a>
+      </li>
+      
+      <li class="item">
+        <a data-ng-href="categories_hackers.html{{param}}" class="link">Catégories de hackers</a>
+      </li>
 
-	  <li class="item">
-	    <a href="cybercrimes.html" class="link">Exemples</a>
-	  </li>
-	  
-	  <li class="item">
-	    <a href="internet.html" class="link">Internet</a>
-	  </li>
+      <li class="item">
+        <a data-ng-href="cybercrimes.html{{param}}" class="link">Exemples</a>
+      </li>
+      
+      <li class="item">
+        <a data-ng-href="internet.html{{param}}" class="link">Internet</a>
+      </li>
     </ul>
+
+    <form id="theme_changer">
+      <table>
+        <tr>
+          <td>
+            Theme : 
+          </td>
+          <td>
+            <select data-ng-model="theme" data-ng-change="updateLink()">
+            <option value="custom">Personnalisé</option>
+            <option value="red">Rouge (base)</option>
+            <option value="green">Vert</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Fond : 
+          </td>
+          <td>
+            <input class="colorTextInput" data-ng-model="colorInputBackground" size="8" />
+            <input class="colorInput" type="color" data-ng-model="colorInputBackground" data-ng-bind="colorInputBackground" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Entête : 
+          </td>
+          <td>
+            <input class="colorTextInput" data-ng-model="colorInputHeader" size="8" />
+            <input class="colorInput" type="color" data-ng-model="colorInputHeader" data-ng-bind="colorInputHeader" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Article : 
+          </td>
+          <td>
+            <input class="colorTextInput" data-ng-model="colorInputArticle" size="8" />
+            <input class="colorInput" type="color" data-ng-model="colorInputArticle" data-ng-bind="colorInputArticle" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Texte :
+          </td>
+          <td>
+            <input class="colorTextInput" data-ng-model="colorInputText" size="8" />
+            <input class="colorInput" type="color" data-ng-model="colorInputText" data-ng-bind="colorInputText" />
+          </td>
+        </tr>
+      </table>
+      <br />
+	  <div><a data-ng-href="{{param}}" data-ng-click="updateLink();reload();">Appliquer</a></div>
+    </form>
   </nav>
 
 <!-- Contenu principal -->
@@ -66,39 +174,39 @@
   
 <!-- Titre -->
     <header>
-	  <a href="../index.html"><h2 id="return">../</h2></a>
+      <a data-ng-href="../index.html{{param}}"><h2 id="return">../</h2></a>
       <br />
       <h2 id="section_title">Présentation</h2>
       <br />
-	</header>
+    </header>
 
-	<section>
+    <section>
 <!-- Présentation site -->
       <article id="resume">
         <h3 class="titre_article">Résumé</h3>
 
         <p>Le but étant de comprendre en quoi les technologies de l'information 
-  	    et de la communication permettent-elles des délits et d'autres actes illicites? 
-  	    <br />
-	    Ce projet est réalisé par 4 étudiants : POUJOL Elyan, ROMESTANT Pierre,
-	    MASSOL Martin et TUFFERY Morgane. Etudiants en 1ère année à l'IUT Informatique de Rodez.</p>
+        et de la communication permettent-elles des délits et d'autres actes illicites? 
+        <br />
+        Ce projet est réalisé par 4 étudiants : POUJOL Elyan, ROMESTANT Pierre,
+        MASSOL Martin et TUFFERY Morgane. Etudiants en 1ère année à l'IUT Informatique de Rodez.</p>
       
-	    <span onclick="page.scrollTop = 0" class="haut_page">
-	      <i class="haut_page_icone fa fa-chevron-circle-up" aria-hidden="true"></i>
-	    </span>
-	  </article>
+        <span onclick="page.scrollTop = 0" class="haut_page">
+          <i class="haut_page_icone fa fa-chevron-circle-up" aria-hidden="true"></i>
+        </span>
+      </article>
 
       <article id="problematique">
         <h3 class="titre_article">Problématique</h3>
 
         <p>En quoi les TICs(technologies de l’information et de la communication)
-		permettent-elles des dérives délictueuses et criminelles ?
-	    </p>
+        permettent-elles des dérives délictueuses et criminelles ?
+        </p>
      
         <span onclick="page.scrollTop = 0" class="haut_page">
-	      <i class="haut_page_icone fa fa-chevron-circle-up" aria-hidden="true"></i>
-	    </span>
-	  </article>
+          <i class="haut_page_icone fa fa-chevron-circle-up" aria-hidden="true"></i>
+        </span>
+      </article>
 
 
       <pre id="skull" class="unselectable"> 
@@ -131,18 +239,13 @@ XXXXX                        XXXXX
 
 <!-- Pied de page -->
     </section>
-      <footer>
-        <h5 id="footer_text">Pierre Romestant - Morgane Tuffery - Elyan Poujol - Martin Massol - 2016</h5>
-      </footer>
+    <footer>
+      <p id="membres">Pierre Romestant - Morgane Tuffery - Elyan Poujol - Martin Massol</p>
+	  <p><a href="https://www.facebook.com/cybercriminalite.projet.iutRodez/" target="_blank">
+	  Retrouvez-nous sur Facebook<img src="../img/fb_logo__blue_58.png" /></p>
+	  <p><a href="http://www.iut-rodez.fr/" target="_blank">IUT de Rodez</a></p>
+	  <p>2016/2017</p>
+    </footer>
   </div>
-  
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-90124780-1', 'auto');
-  ga('send', 'pageview');
-  </script>
 </body>
 </html>
