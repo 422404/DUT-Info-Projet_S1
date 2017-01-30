@@ -1,19 +1,22 @@
 ﻿Journal de bord Morgane :
 
-3/10/2016 : Répartition des taches, mise en place du journal de bord
+[3/10/2016] : Répartition des taches, mise en place du journal de bord
 création des comptes sur GitHub pour le partage des données
 Mise en place du plan par page pour le site (contenu)
 (2h)
 
-17/11/2016 : Mise en place de l'échéancier (30 min)
+[17/11/2016 ]: Mise en place de l'échéancier (30 min)
 
-18/11/2016 : modification du code du site et, on commence a mettre le vrai texte dans les pages (1h30)
+[]18/11/2016] : modification du code du site et, on commence a mettre le vrai texte dans les pages (1h30)
 
-03/01/2017 : Mise en page de la page des differents hackers (1h)
+[03/01/2017] : Mise en page de la page des differents hackers (1h)
 mise en page de la page 2 (30 min)
 mise en page de la page 3 (30 min)
 mise en page de la page 6 (30 min)
 mise en page de la page 8 (30 min)
 mise en page de la page 9 (30 min)
 
-07/01/2017 : Modification du css et des balise <p> (15 min)
+[07/01/2017 ]: Modification du css et des balise <p> (15 min)
+
+[29/01/2017] : Création du dossier d'analyse et finnalisation de ce dernier (4-5h)
+
